@@ -1,6 +1,6 @@
 import React,{ useState } from "react";
 import ShoppingList from "./ShoppingList";
-import itemData from "../data/items";
+import items from "../data/items";
 
 function App() {
 
@@ -16,9 +16,9 @@ function App() {
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={() => setDarkMode(!darkMode)}>Dark Mode</button>
+        <button onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "Light Mode" : "Dark Mode"}</button>
       </header>
-      <ShoppingList items={itemData} />
+      <ShoppingList items={items} />
     </div>
   );
 }
